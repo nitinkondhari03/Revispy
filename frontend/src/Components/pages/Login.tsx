@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios, { AxiosError } from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 interface ApiErrorResponse {
   message: string;

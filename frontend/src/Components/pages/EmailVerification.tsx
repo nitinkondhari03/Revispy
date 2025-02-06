@@ -22,7 +22,7 @@ const EmailVerification = () => {
 const handlesubmit=async(e: React.FormEvent)=>{
   e.preventDefault();
   let verifycode=(code.join("").toString())
-  const x=localStorage.getItem("token")
+  
   let obj={
     verifycode
   }

@@ -2,7 +2,7 @@ import { IoIosSearch } from "react-icons/io";
 import { BsCart2 } from "react-icons/bs";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
-import { Link } from "react-router-dom";
+
 
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
   const handlelogout = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      let res=await axios.get("http://localhost:8080/api/logout");
+      await axios.get("http://localhost:8080/api/logout");
       localStorage.removeItem("token");
       alert("Logout successful.");
       fetchUsers()
